@@ -16,7 +16,7 @@ public class HoaDon {
     private KhachHang kh;
     private String ngayBan;
     private float tongTien;
-    private List<MatHangMua> matHangMuaList = new ArrayList<>();
+    private ArrayList<MatHangMua> matHangMuaList = new ArrayList<>();
 
     public HoaDon(int hoaDonID, KhachHang kh, String ngayBan) {
         this.hoaDonID = hoaDonID;

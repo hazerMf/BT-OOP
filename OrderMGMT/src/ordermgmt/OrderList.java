@@ -6,32 +6,34 @@ package ordermgmt;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 
 /**
  *
  * @author User
  */
 public class OrderList {
-    private List<Order> orders = new ArrayList<>();
+    private ArrayList<Order> orders = new ArrayList<>();
 
-    // Add an order to the list
     public void add(Order order) {
         orders.add(order);
     }
 
-    // Remove an order from the list
     public void remove(Order order) {
-        orders.remove(order);
+        if(orders.contains(order))
+            orders.remove(order);
+        else
+            System.out.println("Order not exist");
     }
 
-    // Get the number of orders
     public int getCount() {
         return orders.size();
     }
 
-    // Get an iterator for the orders
     public Iterator<Order> getIterator() {
         return orders.iterator();
+    }
+    
+    public ArrayList<Order> getOrders(){
+        return orders;
     }
 }

@@ -30,4 +30,21 @@ public class MatHangMua {
     public void ThemMatHangMuaHoaDon() {
         hd.ThemHoaDon(this);
     }
+    
+    public float tinhTongTien(){
+        return soLuong * m.getGia();
+    }
+    
+    public void setSoLuong(int soLuong){
+        if(soLuong <= m.getSoLuong()){
+            this.soLuong = soLuong;
+            m.setSoLuong(m.getSoLuong() - soLuong);
+        }  
+        else
+            System.out.println("Khong du so luong");
+    }
+    
+    public MatHang getMd(){
+        return m;
+    }
 }

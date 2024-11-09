@@ -36,6 +36,10 @@ public class MatHang {
     public int getSoLuong() {
         return soLuong;
     }
+    
+    public void setSoLuong(int soLuong){
+        this.soLuong = soLuong;
+    }
 
     public void ThemMatHangVaoKho(int soLuongThem) {
         this.soLuong += soLuongThem;

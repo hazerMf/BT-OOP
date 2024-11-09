@@ -15,8 +15,10 @@ public class EmployeeMGMT {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Employee p = new PartTimeEmployee("Someone",5,5);
-        System.out.println(p.calculateSalary());
+        Employee e1 = new PartTimeEmployee("Someone",5000,5);
+        Employee e2 = new FullTimeEmployee("Somebody", 35000);
+        System.out.println(e1.calculateSalary());
+        System.out.println(e2.calculateSalary());
     }
     
 }

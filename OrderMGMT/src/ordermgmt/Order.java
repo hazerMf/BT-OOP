@@ -5,6 +5,7 @@
 package ordermgmt;
 
 import java.util.ArrayList;
+import java.util.Currency;
 import java.util.List;
 
 /**
@@ -13,29 +14,20 @@ import java.util.List;
  */
 public class Order {
     private Customer customer;
-    private List<OrderLine> orderLines = new ArrayList<>();
-    private double total = 0.0;
+    private ArrayList<OrderLine> orderLines = new ArrayList<>();
+    private Currency total ;
 
-    public Order(Customer customer) {
+    public Order(Customer customer, Currency total) {
         this.customer = customer;
+        this.total = total;
     }
 
-    // Add a line item to the order
     public void addLine(OrderLine line) {
         orderLines.add(line);
-        total += line.getPrice();
     }
 
-    // Remove a line item from the order
     public void removeLine(OrderLine line) {
-        if (orderLines.remove(line)) {
-            total -= line.getPrice();
-        }
-    }
-
-    // Get total price of the order
-    public double getTotal() {
-        return total;
+        orderLines.remove(line);
     }
 
     public List<OrderLine> getOrderLines() {
@@ -44,5 +36,10 @@ public class Order {
 
     public Customer getCustomer() {
         return customer;
+    }
+    
+    @Override
+    public String toString(){
+        return String.format("Name of customer: %s \nAddress of customer: %s \nCode of customer: %s", customer.getName(), customer.getAddress(), customer.getCode());
     }
 }

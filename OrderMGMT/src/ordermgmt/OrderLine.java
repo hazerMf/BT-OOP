@@ -4,24 +4,20 @@
  */
 package ordermgmt;
 
+import java.util.Currency;
+
 /**
  *
  * @author User
  */
 public class OrderLine {
-    private String item;
-    private double price;
+    private Currency value;
 
-    public OrderLine(String item, double price) {
-        this.item = item;
-        this.price = price;
+    public OrderLine(Currency value) {
+        this.value = value;
     }
-
-    public String getItem() {
-        return item;
-    }
-
-    public double getPrice() {
-        return price;
+    
+    public Currency getValue() {
+        return value;
     }
 }
