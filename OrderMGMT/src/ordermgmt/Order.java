@@ -40,6 +40,6 @@ public class Order {
     
     @Override
     public String toString(){
-        return String.format("Name of customer: %s \nAddress of customer: %s \nCode of customer: %s", customer.getName(), customer.getAddress(), customer.getCode());
+        return String.format("Customer name: %s \nCutomer address: %s \nCustomer code: %s", customer.getName(), customer.getAddress(), customer.getCode());
     }
 }

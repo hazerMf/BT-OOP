@@ -30,15 +30,15 @@ public class HoaDon {
     }
 
     public void InHoaDon() {
-        System.out.println("Hóa đơn ID: " + hoaDonID);
-        System.out.println("Khách hàng: " + kh.getTenKH());
-        System.out.println("Ngày bán: " + ngayBan);
-        System.out.println("Danh sách mặt hàng:");
+        System.out.println("Hoa don ID: " + hoaDonID);
+        System.out.println("Khach hang: " + kh.getTenKH());
+        System.out.println("Ngay ban: " + ngayBan);
+        System.out.println("Danh sach mat hang:");
         for (MatHangMua mh : matHangMuaList) {
-            System.out.println("Mặt hàng: " + mh.getMatHang().getTenMatHang() + 
-                               ", Số lượng: " + mh.getSoLuong() + 
-                               ", Giá: " + mh.getMatHang().getGia());
+            System.out.println("Mat hang: " + mh.getMatHang().getTenMatHang() + 
+                               ", So luong: " + mh.getSoLuong() + 
+                               ", Gia: " + mh.getMatHang().getGia());
         }
-        System.out.println("Tổng tiền: " + tongTien);
+        System.out.println("Tong tien: " + tongTien);
     }
 }
