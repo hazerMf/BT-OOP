@@ -1,16 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package sieuthimgmt;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author User
- */
 public class HoaDon {
     private int hoaDonID;
     private KhachHang kh;
@@ -35,9 +27,7 @@ public class HoaDon {
         System.out.println("Ngay ban: " + ngayBan);
         System.out.println("Danh sach mat hang:");
         for (MatHangMua mh : matHangMuaList) {
-            System.out.println("Mat hang: " + mh.getMatHang().getTenMatHang() + 
-                               ", So luong: " + mh.getSoLuong() + 
-                               ", Gia: " + mh.getMatHang().getGia());
+            System.out.println("Mat hang: " + mh.getMatHang().getTenMatHang() + ", So luong: " + mh.getSoLuong() + ", Gia: " + mh.getMatHang().getGia());
         }
         System.out.println("Tong tien: " + tongTien);
     }
